@@ -36,7 +36,7 @@ class _BmiScreenState extends State<BmiScreen> {
         'Please insert your height in ${(isMetric) ? 'kilos' : 'ponds'}';
 
     return Scaffold(
-        appBar: AppBar(title: Text('BMI Calculator')),
+        appBar: AppBar(title: const Text('BMI Calculator')),
         drawer: const MenuDrawer(),
         bottomNavigationBar: const MenuBottom(),
         body: SingleChildScrollView(
@@ -47,13 +47,13 @@ class _BmiScreenState extends State<BmiScreen> {
                 onPressed: toggleMeasure,
                 children: [
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
                         'Metric',
                         style: TextStyle(fontSize: fontSize),
                       )),
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text(
                         'Imperial',
                         style: TextStyle(fontSize: fontSize),
@@ -117,7 +117,7 @@ class _BmiScreenState extends State<BmiScreen> {
     }
 
     setState(() {
-      result = 'Your BMI is ' + bmi.toStringAsFixed(2);
+      result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
     });
   }
 }

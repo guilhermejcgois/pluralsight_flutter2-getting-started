@@ -29,7 +29,7 @@ class MenuDrawer extends StatelessWidget {
         style: TextStyle(color: Colors.white, fontSize: 28),
       ),
     ));
-    menuTitles.forEach((String element) {
+    for (var element in menuTitles) {
       Widget screen = Container();
       menuItems.add(ListTile(
         title: Text(
@@ -52,7 +52,7 @@ class MenuDrawer extends StatelessWidget {
           );
         },
       ));
-    });
+    }
 
     return menuItems;
   }
